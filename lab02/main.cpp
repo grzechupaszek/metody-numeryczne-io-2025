@@ -21,11 +21,7 @@ double lagrangeInterpolation(const vector<double>& nodes, const vector<double>& 
     }
     return result;
 }
-
-// Funkcja wczytująca dane z pliku.
-// Oczekujemy, że plik zawiera dwie linie:
-// pierwsza linia: "xi:" a potem wartości oddzielone spacjami,
-// druga linia: "f(xi):" a potem odpowiadające wartości funkcji.
+//wczytanie danych z pliku
 bool readData(const string& filename, vector<double>& xs, vector<double>& ys) {
     ifstream infile(filename);
     if (!infile) {
@@ -60,7 +56,7 @@ bool readData(const string& filename, vector<double>& xs, vector<double>& ys) {
     return true;
 }
 
-// Funkcja wybierająca co 'step'-ty punkt jako węzeł interpolacji.
+// Funkcja wybierająca co 'step' punkt jako węzeł interpolacji.
 void selectNodes(const vector<double>& xs, const vector<double>& ys, int step,
                  vector<double>& nodes, vector<double>& nodeValues) {
     nodes.clear();
@@ -73,7 +69,7 @@ void selectNodes(const vector<double>& xs, const vector<double>& ys, int step,
     }
 }
 
-// Funkcja obliczająca średni błąd kwadratowy (MSE) dla punktów, które nie są węzłami.
+// Funkcja obliczająca średni błąd kwadratowy dla punktów, które nie są węzłami.
 double computeMSE(const vector<double>& xs, const vector<double>& ys, 
                     const vector<double>& nodes, const vector<double>& nodeValues) {
     double errorSum = 0.0;
@@ -144,8 +140,8 @@ int main() {
     double bestMSE = numeric_limits<double>::max();
     int total = xs.size();
 
-    // Testujemy liczby węzłów od, powiedzmy, 3 do 15:
-    for (int numNodes = 3; numNodes <= 15; numNodes += 2) {
+    // Testujemy liczby węzłów od, powiedzmy, -9 do 10:
+    for (int numNodes = -9; numNodes <= 10; numNodes += 2) {
         vector<double> nodes_temp, nodeValues_temp;
         // Obliczamy krok, aby równomiernie wybrać numNodes węzłów z pełnego zbioru:
         double indexStep = (total - 1) / static_cast<double>(numNodes - 1);
