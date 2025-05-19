@@ -68,7 +68,9 @@ vector<double> solveLinearSystem(vector<vector<double>> A, vector<double> b) {
 // Function to calculate the inner product of two monomials integrated over [a,b]
 double innerProductMonomials(int i, int j, double a, double b) {
     // Inner product of x^i and x^j is the integral of x^(i+j) over [a,b]
-    return (pow(b, i + j + 1) - pow(a, i + j + 1)) / (i + j + 1);
+    return (pow(
+        
+        b, i + j + 1) - pow(a, i + j + 1)) / (i + j + 1);
 }
 
 // Function to calculate the inner product of a monomial with the function f(x)
@@ -92,7 +94,7 @@ vector<double> leastSquaresApproximation(double a, double b, int degree, int num
     vector<vector<double>> A(n, vector<double>(n));
     vector<double> B(n);
     
-    // Fill matrix A and vector B
+    // Fill matrix A and vector B 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             // A[i][j] is the inner product of x^i and x^j
