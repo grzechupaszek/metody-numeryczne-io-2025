@@ -1,0 +1,7 @@
+# Thermal conductivity simulation results
+# Integration step h = 10 s
+# Initial temperature = 1234 K
+# Alpha = 1.234000e-09
+# Format: Time[s] Temperature_Numerical[K] Temperature_Analytical[K]
+0.000000 1234.000000 1234.000000
+10.000000 -27379.817211 0.000000
