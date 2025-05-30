@@ -1,0 +1,9 @@
+Funkcja,Metoda,Pierwiastek,Liczba iteracji,Błąd końcowy
+Funkcja 1,Bisekcja,0.2774676682,1,0.00e+00
+Funkcja 1,Newton,0.2774676683,5,1.11e-16
+Funkcja 1,Sieczne,0.2774676683,8,0.00e+00
+Funkcja 2,Newton,-0.3202072391,6,0.00e+00
+Funkcja 2,Sieczne,-0.3202072391,9,0.00e+00
+Funkcja 3,Bisekcja,-2.9562395484,1,0.00e+00
+Funkcja 3,Newton,-2.9562395484,7,2.27e-13
+Funkcja 3,Sieczne,0.1094718682,26,0.00e+00
